@@ -19,7 +19,33 @@
 		<a href='index.html'>Home</a>
 		<a href='aaa.html'>Sream</a>
 
+		<img src='flower.jpg' width="200px" height="200px" id='flo'></img>
+		<p id='text'>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+		<button onclick='change()'>Change</button>
+		<button onclick='FLOWER()'>JPG</button>
+		<script>
+			function change(){
+				document.getElementById('text').
+					innerHTML='New';
+				document.getElementById('text').
+					style.color='red';
+			}
 
-		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+			function FLOWER(){
+				let count=0;
+				if(count==0){
+					document.getElementById('flo').style.
+					opacity=0.2
+					document.getElementById('flo').
+					src='flo.jpg';
+					count=1
+				}
+				else{
+					document.getElementById('flo').
+					scr='flower.jpg';
+					count=0;
+				}
+				}
+		</script>
 	</body>
 </html>

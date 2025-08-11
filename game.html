@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>AC</title>
+		<style>
+			a{
+				text-decoration: none;
+				background-color: whitesmoke;
+				padding:5px;
+				margin-left: -4px;
+			}
+			a:hover{
+				background-color: red;
+				color:white;
+				font-family:sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<a href='index.html'>Home</a>
+		<a href='aaa.html'>Sream</a>
+		<a href='game.html'>Game</a>
+
+		<button onclick="rps() ">RIP</button><hr> 
+		<h3 id='result'></h3>
+		<h3 id='win'></h3>
+		<script>
+			let pc=0
+			let cw=0
+			function rps(){
+			let choices=['s','p','r'];
+			let player_choice=prompt('choose r p or s');
+			let cc=choices[Math.floor(Math.random()*3)];
+			document.getElementById('result').innerHTML=('player chose '+player_choice+' and '+'computer chose '+cc);
+
+			if(cc==player_choice){
+    		document.getElementById('win').innerHTML=('Tie game!');
+			}
+    		else{
+        		if((player_choice=='r'&&cc=='s')||(player_choice=='p'&&cc=='r')||(player_choice=='s'&&cc=='p')){
+        			document.getElementById('win').innerHTML=('You win!')
+        			pw++
+        		}
+        		else{
+        			document.getElementById('win').innerHTML=('You lose!')
+        			cw++
+        		}
+			}
+		}
+		</script>
+	</body>
+</html>
